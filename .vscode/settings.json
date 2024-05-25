@@ -1,0 +1,17 @@
+{
+    "go.useLanguageServer": true, // при наборе кода, активирует подсказки, навигацию по коду, форматирование
+    "editor.codeActionsOnSave": {}, // действия при сохранении файла, ничего не указываем чтобы не было конфликтов при сохранении go файлов
+    "go.formatTool": "gofumpt", // утилита для форматирования go файлов.https://github.com/mvdan/gofumpt
+    "[go]": {
+        "editor.formatOnSave": true, // при сохранении файла, будет выполняться форматирование при помощи утилиты gofumpt
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "golang.go"
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": ["--fast"],
+    "gopls": {
+        "formatting.gofumpt": true
+    }
+}
